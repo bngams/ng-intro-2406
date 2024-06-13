@@ -10,3 +10,16 @@ ul {
 ul li {
   margin-left: 15px;
 } 
+
+ul li a {
+  text-decoration: none;
+} 
+
+ul li a:visited {
+  color: inherit;
+} 
+
+a.active {
+  font-weight: bold;
+  text-decoration: underline !important;  
+} 

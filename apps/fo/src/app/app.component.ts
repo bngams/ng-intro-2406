@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuItems } from './modules/theme/models/menuItems';
 
 @Component({
   selector: 'fo-root',
@@ -8,10 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fo';
-  today = new Date();
-  dateFormat = 'short';
-
-  myMethod() {
-    alert('Hello !!');
-  }
+  menu: MenuItems = [
+    {text: 'Home', link: '/home'},
+    {text: 'Get started', link: '/get-started'}
+  ];
 }

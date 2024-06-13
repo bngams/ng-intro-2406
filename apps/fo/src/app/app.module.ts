@@ -8,6 +8,9 @@ import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
 import { CoreComponent } from 'core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ThemeModule } from './modules/theme/theme.module';
+import { HomeComponent } from './pages/home/home.component';
+import { GetStartedComponent } from './pages/get-started/get-started.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const STANDALONE_IMPORTS = [
   CoreComponent,
@@ -17,6 +20,9 @@ const STANDALONE_IMPORTS = [
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    GetStartedComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
