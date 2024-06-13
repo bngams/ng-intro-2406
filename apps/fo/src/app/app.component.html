@@ -323,6 +323,46 @@
       </div>
     </div>
   </div>
+  <div class="other-content">
+    <h2>Interpolation / {{ '{{ property }}' }}  </h2>
+    <p> My title is {{ title }} </p>
+  
+    <h2>Angular exp {{ '{{ code expression / intructions }}' }} </h2>
+    <p> My title is 1 + 1 = {{ 1 + 1 }} </p>
+    <p> My title is {{ 'NO {{ new Math.random() }}' }} </p>
+  
+    <h2>Pipe {{ '{{ code expression / intructions | function  }}' }} </h2>
+    <p> My title is {{ title | uppercase }} </p>
+    <p> My title is {{ title | lowercase }} </p>
+    <p> My custom pipe result 2² : {{ 2 | exponentialStrength:2 }}
+    <p> Today is {{ today  | date:dateFormat }} (can be translated with LOCALE)
+  
+    <h2>Directives {{ '*ngXXXXX' }} </h2>
+    <!-- ng-template [ngIf] ..  -->
+    <p *ngIf="title.length > 4"> My structural directive is displaying this paragraph by changing DOM tree /!\ perf </p>
+    <p [hidden]="title.length <= 4">My attribute directive / property binding is displaying this paragraph without DOM tree impact</p>
+    <p *ngFor="let w of ['Hello', 'world', '!!!'] ">
+      {{ w }}  - {{ w.length }} 
+    </p>
+    <ng-container *ngFor="let w of ['Hello', 'world', '!!!'] ">
+      <p>{{ w }}</p><p>{{ w.length }}</p>
+    </ng-container>
+  
+    <h2>Attribute binding</h2>
+    <p [hidden]="false"> [hidden]="{{ '{{ expr }}' }} " => value as expr. </p>
+    <p hidden="false"> hidden="string" => value as string</p>
+  
+    <h2>Control flow {{ '@' }} </h2>
+    @if(title.length > 4) {
+      <p>My structural directive is displaying this paragraph by changing DOM tree /!\ perf </p>
+    }
+
+    <h2>Events</h2>
+    <button (click)="myMethod()">Some button</button>
+  
+    <!-- ng-content ..  -->
+  
+  </div>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
