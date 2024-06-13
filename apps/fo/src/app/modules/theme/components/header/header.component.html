@@ -1,0 +1,15 @@
+<header>
+  <!-- [color]="'primary'" -->
+  <mat-toolbar color="primary">
+      <span>My Application</span>
+      <span class="spacer"></span>
+      <!-- MENU -->
+      <ul id="main-menu">
+        @for (item of menuItems; track item.text) {
+          <li>{{ item.text }}</li>
+        } @empty {
+          <li>There are no items.</li>
+        }
+      </ul>
+  </mat-toolbar>
+</header>

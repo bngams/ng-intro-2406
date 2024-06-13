@@ -19,7 +19,7 @@
       },
       "root": "apps/fo",
       "sourceRoot": "apps/fo/src",
-      "prefix": "app",
+      "prefix": "fo",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -37,6 +37,7 @@
               "apps/fo/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "apps/fo/src/styles.scss"
             ],
             "scripts": []
@@ -97,6 +98,7 @@
               "apps/fo/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "apps/fo/src/styles.scss"
             ],
             "scripts": []

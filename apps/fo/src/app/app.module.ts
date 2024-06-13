@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import { CommonModule, DatePipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
 import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
 import { CoreComponent } from 'core';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ThemeModule } from './modules/theme/theme.module';
 
-const standaloneImports = [
+const STANDALONE_IMPORTS = [
   CoreComponent,
   ExponentialStrengthPipe
 ];
-
 
 @NgModule({
   declarations: [
@@ -21,9 +22,12 @@ const standaloneImports = [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    ...standaloneImports
+    ...STANDALONE_IMPORTS,
+    ThemeModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
