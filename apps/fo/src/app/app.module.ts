@@ -11,6 +11,7 @@ import { ThemeModule } from './modules/theme/theme.module';
 import { HomeComponent } from './pages/home/home.component';
 import { GetStartedComponent } from './pages/get-started/get-started.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const STANDALONE_IMPORTS = [
   CoreComponent,
@@ -29,7 +30,8 @@ const STANDALONE_IMPORTS = [
     AppRoutingModule,
     CommonModule,
     ...STANDALONE_IMPORTS,
-    ThemeModule
+    ThemeModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync()

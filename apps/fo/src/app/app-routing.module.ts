@@ -7,6 +7,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'get-started', component: GetStartedComponent },
+  { path: 'products', data: { preload: true }, loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule) },
+  { path: 'cart', loadChildren: () => import('./modules/cart/cart.module').then(m => m.CartModule) },
   { path: '', redirectTo: '/home', pathMatch: 'full' }, 
   { path: '**', component: NotFoundComponent} 
 ];

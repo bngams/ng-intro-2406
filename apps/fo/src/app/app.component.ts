@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'fo';
   menu: MenuItems = [
     {text: 'Home', link: '/home'},
-    {text: 'Get started', link: '/get-started'}
+    {text: 'Get started', link: '/get-started'},
+    {text: 'Products', link: '/products'},
+    {text: 'Cart', link: '/cart'},
   ];
 }
